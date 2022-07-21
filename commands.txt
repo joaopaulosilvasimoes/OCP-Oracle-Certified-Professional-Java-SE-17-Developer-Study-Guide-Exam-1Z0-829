@@ -1,0 +1,28 @@
+# Run (With parameters)
+
+java Zoo.java Bronx Zoo
+
+# Single file compile
+
+javac chapter_1/packagea/ClassA.java
+
+javac chapter_1/packageb/ClassB.java
+
+# Multi file compile
+
+javac packagea/*.java
+
+javac packageb/*.java
+
+# Compiling to Another Directory
+
+javac -d classes packagea/*.java packageb/*.java
+
+# Run withclasspath (All valid)
+
+java -cp classes packageb.ClassB
+java -classpath classes packageb.ClassB
+java --class-path classes packageb.ClassB
+
+# Creating JAR file
+
