@@ -28,9 +28,9 @@ public class Primitive {
 
     static int intPrimitiveLiteral = 3; 
 
-    static long longPrimitiveLiteral = 4;
+    static long longPrimitiveLiteral = 4L; // L or l
 
-    static float floatPrimitiveLiteral = 5; 
+    static float floatPrimitiveLiteral = 5F; // F or f
 
     static double doublePrimitiveLiteral = 6; 
 
@@ -49,6 +49,9 @@ public class Primitive {
     //double notByDecimal = 1000_.00;        // DOES NOT COMPILE 
     static double annoyingButLegal = 1_00_0.0_0;  // Ugly, but compiles 
     static double reallyUgly = 1__________2;      // Also compiles   
+
+    static long smallLong = 1; // Without "l" or "L", The compiler considers it as an int, and then, since the data type you have given is a long, so it does automatic conversion to long data type. 
+    static long bigLong = 9999999999L; // The literal 9999999999 of type int is out of range 
 
     public static void main(String[] args){
 
@@ -104,6 +107,10 @@ public class Primitive {
         System.out.println(annoyingButLegal); 
 
         System.out.println(reallyUgly); 
+
+        System.out.println(smallLong);
+        
+        System.out.println(bigLong); 
 
     }
 
